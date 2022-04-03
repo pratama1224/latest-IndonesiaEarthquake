@@ -5,23 +5,36 @@ MODULARISASI DENGAN PACKAGES
 """
 import requests
 from bs4 import BeautifulSoup
-
 import gempa_terkini
 
+"""
+Method = Fungsi 
+Field/Attribute = variable   
+"""
 
-def ekstraksi_data():
-    """
-    Tanggal: 09 Maret 2022,
-    Waktu:08:49:18 WIB
-    
-    Magnitudo: 5.2
-    Loksi: LS=2.57  BT=128.43 BT
-    Kedalaman: 14 km
-    Pusat Gempa: Pusat gempa berada di Laut 60 km TimurLaut Daruba Dirasakan (Skala MMI): II-III Morotai
-    :return:
-    """
-    try:
-        content = requests.get('https://bmkg.go.id')
+
+description = 'To get the latest earthquake information from BMKG.go.id'
+
+class GempaTerkini:
+    def __init__(self, xurl):
+        self.desription = 'To get the latest earthquake in indonesia from BMKG.go.id'
+        self.result = None
+        self.url = xurl
+
+    def ekstraksi_data(self):
+        """
+        Tanggal: 09 Maret 2022,
+        Waktu:08:49:18 WIB
+
+        Magnitudo: 5.2
+        Loksi: LS=2.57  BT=128.43 BT
+        Kedalaman: 14 km
+        Pusat Gempa: Pusat gempa berada di Laut 60 km TimurLaut Daruba Dirasakan (Skala MMI): II-III Morotai
+        :return:
+        """
+        url = ''
+        try:
+            content = requests.get('https://bmkg.go.id')
     except Exception:
         return None
 

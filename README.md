@@ -4,6 +4,11 @@ This package will get the latest Earthquake from BMKG Badan Meteorologi, Klimato
 ## HOW IT WORKS 
 This packages will scrape from [BMKG](https://bmkg.co.id) to get latet quake happenend in Indonesia.
 
+
+## HOW TO USE 
+
+
+
 ## My-First Python code 
 Ini adl project pertama sy dengan python
 
